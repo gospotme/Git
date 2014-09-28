@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Go Spot Me!</title>
+
+    <!-- Style sheet -->
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+	<link rel="stylesheet" type="text/css" href="alertify.core.css" />
+	<link rel="stylesheet" type="text/css" href="alertify.bootstrap.css" />
+
+    <!-- for Google -->
+    <meta name="description" content="Track and remember your location from your mobile device for FREE!  See your current and saved locations on a map, get directions, share with friends, and more." />
+    <meta name="keywords" content="Go Spot Me! GoSpotMe Remember Where I Parked" />
+
+    <meta name="author" content="Michael Battaglia" />
+    <meta name="copyright" content="2013" />
+    <meta name="application-name" content="Go Spot Me!" />
+
+    <!-- for Facebook -->
+    <!-- See: https://developers.facebook.com/tools/debug -->
+    <!-- You can have multiple og:image tags, however the larger (or "sharper") images will appear first -->
+    <meta property="og:title" content="Go Spot Me!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://www.gospotme.com/logo_300.png" />
+    <meta property="og:image" content="http://www.gospotme.com/qr_200.png" />
+    <meta property="og:url" content="http://www.gospotme.com" />
+    <meta property="og:description" content="Track and remember your location from your mobile device for FREE!  See your current and saved locations on a map, get directions, share with friends, and more." />
+
+    <!-- for Twitter -->          
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Go Spot Me!" />
+    <meta name="twitter:description" content="Track and remember your location from your mobile device for FREE!  See your current and saved locations on a map, get directions, share with friends, and more." />
+    <meta name="twitter:image" content="http://www.gospotme.com/logo_57.jpg" />
+
+    <!-- No Caching -->
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- No zooming -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+
+    <!-- Marker Icons: http://mapicons.nicolasmollet.com/ -->
+
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="logo_114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="logo_72.png" />
+    <link rel="apple-touch-icon-precomposed" href="logo_57.png" />
+    <link rel="apple-touch-icon" href="logo_57.png" />
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="alertify.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    
+</head>
+<body onload="javascript: body_OnLoad();">
+    <div>
+        <img src="logo.png" width="100%" />
+        <!--<a href="http://www.kickstarter.com" target="_blank" class="Kickstarter">Find Us On Kickstarter!</a>-->
+    </div>
+    <table style="width: 100%;">
+        <tr>
+            <td style="text-align: center; font-weight: bold;">
+                <a href="http://www.kickstarter.com/projects/1458478682/go-spot-me" target="_blank">Find Us On Kickstarter!</a>
+            </td>
+        </tr>
+    </table>
+
+    <table class="Ads" style="width: 100%; position:absolute; visibility: hidden;">
+        <tr>
+            <td>
+                			
+<!--
+                <script language="javascript" type="text/javascript" charset="utf-8">
+                    var cpxcenter_banner_border = '#FFFFFF';
+                    var cpxcenter_banner_text = '#000000';
+                    var cpxcenter_banner_bg = '#FFFFFF';
+                    var cpxcenter_banner_link = '#000000';
+                    cpxcenter_width = 468;
+                    cpxcenter_height = 60;
+                </script>
+                <script language="JavaScript" type="text/javascript" src="//ads.cpxcenter.com/cpxcenter/showAd.php?nid=4&amp;zone=34078&amp;type=banner&amp;sid=25876&amp;pid=25633&amp;subid=">
+                </script>
+                <!-- END CLIENT.YESADVERTISING CODE -->
+
+                <!-- <a href="http://ads.cpxcenter.com/cpxcenter/s_click.php?nid=4&amp;pid=25633&amp;sid=25876&amp;cid=9528&amp;cuid=5kl5lll&amp;adtype=2&amp;ad=127752&amp;subid=&amp;opt1=&amp;opt2=" target="_blank"><img src="http://ads.cpxcenter.com/cpxcenter/cr_image.php?nid=4&amp;pid=25633&amp;sid=25876&amp;cid=9528&amp;cuid=5kl5lll&amp;ad=127752&amp;adtype=2&amp;subid=&amp;opt1=&amp;opt2=" border="1" width="100%"></a> -->
+                <!-- <a href="http://ads.cpxcenter.com/cpxcenter/s_click.php?nid=4&amp;pid=25633&amp;sid=25876&amp;cid=9535&amp;cuid=np7he3c&amp;adtype=2&amp;ad=127778&amp;subid=&amp;opt1=&amp;opt2="><img src="http://ads.cpxcenter.com/cpxcenter/cr_image.php?nid=4&amp;pid=25633&amp;sid=25876&amp;cid=9535&amp;cuid=np7he3c&amp;ad=127778&amp;adtype=2&amp;subid=&amp;opt1=&amp;opt2=" border="0" width="100%"></a> -->
+            </td>
+        </tr>
+<!--    <tr>
+            <td>
+                Ad
+            </td>
+        </tr>-->
+    </table>
+     
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <input type="button" id="btnGetCurrentLocation" value="Go Spot Me!" style="width: 100%; visibility: hidden;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="divCurrentLocation" class="ShowCurrentLocation" style="height: 0px;"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="btnSaveCurrentLocation" value="Save My Spot" style="width: 100%; font-weight: bold; visibility: hidden; position:absolute;" />
+            </td>
+        </tr>
+    </table>
+    
+    <table id="tblSavedLocations" style="width: 100%"></table>
+
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <div style="text-align: center;">
+                    <a href="mailto:contact@gospotme.com?subject=Go Spot Me&body=">Contact</a>
+                    |
+                    Copyright © 2013
+                </div>                
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

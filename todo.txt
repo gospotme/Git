@@ -1,0 +1,6 @@
+
+See how to implement custom icon for marker (24x24 PNG)
+ -Embed the image into the current.png image (using Paint .NET for transparency)
+ -Name the image based on the index number of custom icons (Ex: pedger #11 = http://www.gospotme.com/?&mid=11)
+ -This will store the custom icon in the local storage for future reference
+ -It can be reset by simply visiting http://www.gospotme.com/?&mid=-1
